@@ -6,20 +6,19 @@ A beautifully designed, responsive web application built for an NGO healthcare s
 
 ## 🌐 Live Demo
 
-**[🔗 Live Hosted Link →](https://your-deployed-url.run.app)**  
-*(Replace with your actual Cloud Run / Vercel / Netlify URL after deployment)*
+**[🔗 Live Hosted Link →]https://care-connect-sooty-mu.vercel.app/**
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Structure | HTML5 (semantic) |
-| Styling | Vanilla CSS (glassmorphism, animations, responsive grid) |
-| Logic | Vanilla JavaScript (ES6+) |
-| Fonts | Google Fonts – Inter, Outfit |
-| Deployment | Google Cloud Run / Nginx (Docker) |
+| Layer      | Technology                                               |
+| ---------- | -------------------------------------------------------- |
+| Structure  | HTML5 (semantic)                                         |
+| Styling    | Vanilla CSS (glassmorphism, animations, responsive grid) |
+| Logic      | Vanilla JavaScript (ES6+)                                |
+| Fonts      | Google Fonts – Inter, Outfit                             |
+| Deployment | Google Cloud Run / Nginx (Docker)                        |
 
 **No frameworks, no dependencies** — pure HTML/CSS/JS for maximum portability and fast load times.
 
@@ -30,6 +29,7 @@ A beautifully designed, responsive web application built for an NGO healthcare s
 **CareBuddy** is an embedded conversational AI assistant that answers patient and volunteer queries in real time.
 
 ### How It Works
+
 - A **knowledge base** of 13+ FAQ categories is defined in `app.js`
 - When a user sends a message, the chatbot **keyword-matches** the input against the knowledge base
 - A simulated **typing indicator** and random response delay (700–1500ms) mimic real AI latency
@@ -37,7 +37,9 @@ A beautifully designed, responsive web application built for an NGO healthcare s
 - Falls back gracefully with a contact prompt if no match is found
 
 ### NGO Use-Case Value
+
 In a production deployment, CareBuddy would connect to:
+
 - **Dialogflow / Rasa** for NLP-powered understanding
 - **Backend API** to check application status, volunteer availability, and real-time FAQs
 - **WhatsApp / SMS integration** via Twilio for patients without smartphones
@@ -49,30 +51,36 @@ This dramatically reduces the manual load on NGO support staff for repetitive qu
 ## 📋 Features
 
 ### 🤒 Patient Support Form
+
 - Full name, age, phone, city, support type selection
 - Description field for personalized case assessment
 - Real-time client-side validation with helpful error messages
 - Consent checkbox + simulated async submission
 
 ### 🤝 Volunteer Registration Form
+
 - Name, qualification, phone, city, email, expertise area
 - Availability selector and motivation textarea
 - Code of conduct consent
 
 ### 💬 CareBuddy AI Chatbot
+
 - Floating chat button with pulse animation
 - Keyword-based intent matching across 13 FAQ categories
 - Typing indicator with animated dots
 - Quick reply chips for common questions
 
 ### 📖 FAQ Accordion
+
 - 6 commonly asked questions with smooth expand/collapse
 - Scroll-triggered entrance animations
 
 ### 📬 Contact Form
+
 - Name, email, and message with simulated send
 
 ### 🎨 Design Highlights
+
 - Dark mode UI with teal/blue gradient accents
 - Animated background blobs in the hero section
 - Glassmorphism cards
@@ -146,4 +154,4 @@ gcloud run deploy careconnect --source . --region europe-west1 --allow-unauthent
 
 ---
 
-*Made with ❤️ for India's healthcare communities.*
+_Made with ❤️ for India's healthcare communities._
