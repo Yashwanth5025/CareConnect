@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareConnect – NGO Healthcare Support Platform</title>
+  <meta name="description" content="CareConnect connects patients and volunteers to quality healthcare support. Register as a patient or volunteer and get instant answers from our AI assistant." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🏥</span>
+        CareConnect
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="btn-primary nav-cta" onclick="scrollToSection('register')">Get Support</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">🌿 Non-Profit Healthcare Initiative</div>
+      <h1 class="hero-title">Quality Healthcare<br/><span class="gradient-text">For Everyone</span></h1>
+      <p class="hero-subtitle">CareConnect bridges patients with compassionate volunteers and medical professionals — free of cost, powered by community.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="scrollToSection('register')">Register Now</button>
+        <button class="btn-outline" onclick="openChat()">💬 Ask AI Assistant</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">12,400+</span><span class="stat-label">Patients Helped</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">3,800+</span><span class="stat-label">Volunteers</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">48</span><span class="stat-label">Cities Covered</span></div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="card-floating card-f1">
+        <span class="card-icon">❤️</span>
+        <div><strong>Health Support</strong><br/><small>24/7 Available</small></div>
+      </div>
+      <div class="hero-img-wrap">
+        <img src="hero-image.png" alt="Healthcare support illustration" id="hero-img" />
+      </div>
+      <div class="card-floating card-f2">
+        <span class="card-icon">🤝</span>
+        <div><strong>Volunteers Active</strong><br/><small>3,800 ready to help</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-tag">Our Mission</div>
+      <h2 class="section-title">Who We Are</h2>
+      <p class="section-sub">CareConnect is a registered NGO dedicated to making quality healthcare accessible to underprivileged communities. We connect patients in need with trained volunteers, doctors, and mental health professionals — all at zero cost.</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feat-icon">🩺</div>
+          <h3>Medical Assistance</h3>
+          <p>Access free consultations, prescription guidance, and referrals to government hospitals in your area.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🧠</div>
+          <h3>Mental Health Support</h3>
+          <p>Connect with trained counselors and mental health advocates for anonymous, judgment-free support.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">💊</div>
+          <h3>Medicine Aid</h3>
+          <p>Our medicine bank programs ensure essential medications reach those who cannot afford them.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🚑</div>
+          <h3>Emergency Response</h3>
+          <p>Rapid volunteer dispatch for health emergencies, with coordination support for ambulance services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTER FORM -->
+  <section id="register">
+    <div class="section-inner">
+      <div class="section-tag">Join Us</div>
+      <h2 class="section-title">Register Today</h2>
+      <p class="section-sub">Whether you need support or want to give it — we welcome you.</p>
+
+      <div class="form-tabs">
+        <button class="tab-btn active" id="tab-patient" onclick="switchTab('patient')">🤒 Patient Support</button>
+        <button class="tab-btn" id="tab-volunteer" onclick="switchTab('volunteer')">🤝 Volunteer Registration</button>
+      </div>
+
+      <!-- Patient Form -->
+      <div class="form-card" id="form-patient">
+        <form id="patient-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="p-name">Full Name *</label>
+              <input type="text" id="p-name" placeholder="e.g. Priya Sharma" required />
+              <span class="field-error" id="err-p-name"></span>
+            </div>
+            <div class="form-group">
+              <label for="p-age">Age *</label>
+              <input type="number" id="p-age" placeholder="e.g. 34" min="1" max="120" required />
+              <span class="field-error" id="err-p-age"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="p-phone">Phone Number *</label>
+              <input type="tel" id="p-phone" placeholder="+91 98765 43210" required />
+              <span class="field-error" id="err-p-phone"></span>
+            </div>
+            <div class="form-group">
+              <label for="p-city">City / District *</label>
+              <input type="text" id="p-city" placeholder="e.g. Hyderabad" required />
+              <span class="field-error" id="err-p-city"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="p-email">Email Address</label>
+            <input type="email" id="p-email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="p-support">Type of Support Needed *</label>
+            <select id="p-support" required>
+              <option value="">-- Select support type --</option>
+              <option>Medical Consultation</option>
+              <option>Mental Health Support</option>
+              <option>Medicine Aid</option>
+              <option>Emergency Assistance</option>
+              <option>Home Care Support</option>
+              <option>Other</option>
+            </select>
+            <span class="field-error" id="err-p-support"></span>
+          </div>
+          <div class="form-group">
+            <label for="p-desc">Briefly describe your situation</label>
+            <textarea id="p-desc" rows="4" placeholder="Tell us a little about your health situation so we can match you with the right support..."></textarea>
+          </div>
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="p-consent" required />
+              <span>I consent to CareConnect using my information to provide healthcare support services. *</span>
+            </label>
+            <span class="field-error" id="err-p-consent"></span>
+          </div>
+          <button type="submit" class="btn-primary submit-btn" id="patient-submit">
+            <span class="btn-text">Submit Request</span>
+            <span class="btn-loader hidden" id="patient-loader">⏳</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Volunteer Form -->
+      <div class="form-card hidden" id="form-volunteer">
+        <form id="volunteer-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="v-name">Full Name *</label>
+              <input type="text" id="v-name" placeholder="e.g. Rahul Mehta" required />
+              <span class="field-error" id="err-v-name"></span>
+            </div>
+            <div class="form-group">
+              <label for="v-qual">Qualification *</label>
+              <input type="text" id="v-qual" placeholder="e.g. MBBS, B.Sc Nursing" required />
+              <span class="field-error" id="err-v-qual"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="v-phone">Phone Number *</label>
+              <input type="tel" id="v-phone" placeholder="+91 98765 43210" required />
+              <span class="field-error" id="err-v-phone"></span>
+            </div>
+            <div class="form-group">
+              <label for="v-city">City / District *</label>
+              <input type="text" id="v-city" placeholder="e.g. Pune" required />
+              <span class="field-error" id="err-v-city"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="v-email">Email Address *</label>
+            <input type="email" id="v-email" placeholder="you@example.com" required />
+            <span class="field-error" id="err-v-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="v-expertise">Area of Expertise *</label>
+            <select id="v-expertise" required>
+              <option value="">-- Select expertise --</option>
+              <option>General Medicine</option>
+              <option>Mental Health / Counseling</option>
+              <option>Nursing / Paramedic</option>
+              <option>Pharmacy</option>
+              <option>Community Outreach</option>
+              <option>Administrative Support</option>
+              <option>Other</option>
+            </select>
+            <span class="field-error" id="err-v-expertise"></span>
+          </div>
+          <div class="form-group">
+            <label for="v-avail">Availability (hours/week)</label>
+            <select id="v-avail">
+              <option value="">-- Select availability --</option>
+              <option>1–5 hours</option>
+              <option>5–10 hours</option>
+              <option>10–20 hours</option>
+              <option>Full-time</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="v-motivation">Why do you want to volunteer?</label>
+            <textarea id="v-motivation" rows="3" placeholder="Share a little about your motivation to join CareConnect..."></textarea>
+          </div>
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="v-consent" required />
+              <span>I agree to CareConnect's volunteer code of conduct and privacy policy. *</span>
+            </label>
+            <span class="field-error" id="err-v-consent"></span>
+          </div>
+          <button type="submit" class="btn-primary submit-btn" id="volunteer-submit">
+            <span class="btn-text">Join as Volunteer</span>
+            <span class="btn-loader hidden" id="volunteer-loader">⏳</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Message -->
+      <div class="success-card hidden" id="success-msg">
+        <div class="success-icon">🎉</div>
+        <h3 id="success-title">Thank you for registering!</h3>
+        <p id="success-body">Our team will reach out to you within 24 hours. <br/>In the meantime, feel free to ask our AI assistant any questions.</p>
+        <button class="btn-primary" onclick="openChat()">💬 Ask the AI Assistant</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs">
+    <div class="section-inner">
+      <div class="section-tag">Help Center</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Can't find your answer? Ask our AI-powered assistant below.</p>
+      <div class="faq-grid">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Is CareConnect completely free? <span class="faq-arrow">▾</span></div>
+          <div class="faq-a">Yes. CareConnect is a non-profit initiative. All patient support services, volunteer matching, and resources are provided at zero cost.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">How quickly will I be matched with a volunteer? <span class="faq-arrow">▾</span></div>
+          <div class="faq-a">For non-emergency cases, we typically match within 24–48 hours. Emergency requests are expedited and handled within a few hours based on availability.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Who can register as a volunteer? <span class="faq-arrow">▾</span></div>
+          <div class="faq-a">Anyone with healthcare-related qualifications (MBBS, nursing, pharmacy, counseling, etc.) or community outreach experience can apply. We conduct a brief screening for medical roles.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Is my personal data safe? <span class="faq-arrow">▾</span></div>
+          <div class="faq-a">Absolutely. Your data is encrypted and stored securely. We never sell or share your data with third parties. You may request deletion at any time.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What areas does CareConnect currently serve? <span class="faq-arrow">▾</span></div>
+          <div class="faq-a">We currently operate in 48 cities across India. Telehealth services are available nationwide. We are actively expanding to rural areas.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Can I get mental health support anonymously? <span class="faq-arrow">▾</span></div>
+          <div class="faq-a">Yes. Mental health sessions can be taken under a pseudonym via our anonymous support pathway. We respect your privacy completely.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner contact-inner">
+      <div class="contact-info">
+        <div class="section-tag">Reach Out</div>
+        <h2 class="section-title">Contact Us</h2>
+        <p>Have questions or partnership inquiries? Our team is here to help.</p>
+        <div class="contact-item"><span>📧</span> support@careconnect.org</div>
+        <div class="contact-item"><span>📞</span> +91 1800-CARE-NGO (Toll Free)</div>
+        <div class="contact-item"><span>📍</span> 204, NRI Layout, Bengaluru – 560016</div>
+        <div class="contact-socials">
+          <a href="#" class="social-link" title="Twitter">𝕏</a>
+          <a href="#" class="social-link" title="Instagram">📸</a>
+          <a href="#" class="social-link" title="LinkedIn">in</a>
+          <a href="#" class="social-link" title="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="c-name">Name</label>
+            <input type="text" id="c-name" placeholder="Your Name" />
+          </div>
+          <div class="form-group">
+            <label for="c-email">Email</label>
+            <input type="email" id="c-email" placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="c-msg">Message</label>
+            <textarea id="c-msg" rows="4" placeholder="How can we help you?"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" id="contact-submit">Send Message</button>
+          <div class="contact-success hidden" id="contact-success">✅ Message sent! We'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">🏥 CareConnect</div>
+      <p class="footer-tagline">Healthcare for humanity, powered by community.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#register">Register</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">© 2025 CareConnect NGO. All rights reserved. Made with ❤️ for India.</p>
+    </div>
+  </footer>
+
+  <!-- AI CHATBOT -->
+  <div class="chat-fab" id="chat-fab" onclick="openChat()" title="Ask our AI Assistant">
+    <span class="fab-icon">💬</span>
+    <span class="fab-pulse"></span>
+  </div>
+
+  <div class="chat-window hidden" id="chat-window">
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div class="chat-title">
+        <strong>CareBuddy AI</strong>
+        <span class="chat-status">🟢 Online</span>
+      </div>
+      <button class="chat-close" onclick="closeChat()">✕</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="msg bot">
+        <div class="msg-bubble">
+          Hi! I'm <strong>CareBuddy</strong>, CareConnect's AI assistant 👋<br/>
+          I can answer questions about our services, volunteering, and healthcare support. How can I help you today?
+        </div>
+        <div class="msg-time">Just now</div>
+      </div>
+      <div class="quick-replies" id="quick-replies">
+        <button class="qr-btn" onclick="sendQuick('How do I register as a patient?')">🤒 Patient registration</button>
+        <button class="qr-btn" onclick="sendQuick('How can I volunteer?')">🤝 Volunteering</button>
+        <button class="qr-btn" onclick="sendQuick('Is the service free?')">💰 Is it free?</button>
+        <button class="qr-btn" onclick="sendQuick('What services do you offer?')">🩺 Services</button>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="chat-input" placeholder="Type your question…" onkeydown="handleChatKey(event)" />
+      <button class="chat-send" onclick="sendMessage()" id="chat-send-btn">➤</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

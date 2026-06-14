@@ -1,122 +1,149 @@
-<h1>ScoutTalent</h1>
-    <div >
-        <img src="https://res.cloudinary.com/dhuado5jg/image/upload/v1760805592/logowithbg_yqkneu.png" alt="icon" style="height:100px;width:100px;">
-    </div>
-    <hr>
-    <div id="Toc">
-        <h2>Table of Contents</h2>
-            <a href="#abstract">- Introduction</a><br>
-            <a href="#req">- Requirements</a><br>
-            <a href="#ins">- How to Use</a><br>
-            <a href="#preview">- Preview</a><br>
-            <a href="#Team">- Team</a><br>
-            <a href="#cont">- Contribution</a><br>
-            <a href="#improve">- Improvements</a><br>
-    </div>
-    <hr>
-    <div id="abstract">
-        <h2>Abstract</h2>
-        <p>This web-based application streamlines the entire football scouting and talent management workflow. It features an objective, points-based evaluation system that helps scouts accurately assess players using performance metrics, league competitiveness, team strength, and custom scoring logic.<br>
-        Scouts can easily search, filter, and compare players worldwide based on specific criteria, making talent discovery faster and more reliable.<br>
-        The platform also includes a player marketplace, where agents can list their players, attract interest from clubs, and manage transfer opportunities. Once a player signs a new contract, agents can quickly update or remove their listing. Players can explore career opportunities and connect with clubs globally, ensuring transparency and accessibility throughout the football ecosystem.<br>
-        Overall, this system provides a modern, data-driven approach to scouting while empowering agents, players, and clubs to collaborate more effectively. OpenAI can also be used for AI-assisted scouting analysis and agent workflows when configured through backend environment variables.</p>
-    </div>
-    <hr>
-    <div id="req">
-        <h2>Requirements</h2>
-        <table style="border-collapse: collapse;">
-            <tr>
-                <th >Nodejs</th>
-                <td >
-                    <a href="https://nodejs.org/en/download">v22.20.0</a>
-                </td>
-            </tr>
-            <tr>
-                <th >Nodemon</th>
-                <td >
-                    <a href="https://www.npmjs.com/package/nodemon">3.1.10</a>
-                </td>
-            </tr>
-            <tr>
-                <th >Vite+React</th>
-                <td >
-                    <a href="https://vite.dev/guide/">v7.1.9</a>
-                </td>
-            </tr>
-            <tr>
-                <th >MongoDB</th>
-                <td >
-                    <a href="https://www.mongodb.com/products/self-managed/community-edition">v8.2.1</a>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <div id="ins">
-        <h2>How to Use</h2>
-        <ol>
-            <li>Clone the repository using <br>
-            <pre><code>git clone &lt;https://github.com/AAC-Open-Source-Pool/25AACR17.git&gt;</code></pre></li>
-            <li>Navigate to the project directory:<br><pre><code> cd 25AACR17 <br> npm install</code></pre></li>
-            <li>Install the dependencies for both frontend and backend:
-                <ul>
-                    <li>For frontend: <pre><code>cd ScoutTalent <br> npm install <br>cd .. </code></pre></li>
-                    <li>For backend: <pre><code>cd Backend <br> npm install</code></pre></li>
-                </ul>
-            </li>
-            <li>Set up environment variables:
-                <ul></button>
-                    <li>Create a .env file in the Backend directory.</li>
-                    <li>Add your MongoDB connection string and any other required variables.</li>
-                </ul>
-            </li>
-            <li>Start the development servers:
-                <ul>
-                    <li>Return back to the your folder consisting both ScoutTalent and Backend folders using:<br>
-                    <pre><code>cd ..</code></pre>
-                    </li>
-                    <li>For frontend and backend: <pre><code>npm start</code></pre></li>
-                </ul>
-            </li>
-            <li>Open your browser and navigate to the provided localhost URL to view the application.</li>
-        </ol>
-    </div>
-    <hr>
-    <div id="preview">
-            <h2>Preview</h2>
-            <img src="https://res.cloudinary.com/dhuado5jg/image/upload/v1760806311/0f4fc1f0-3c6d-49ec-b579-e254cb58c10b.png" alt="home page"><br>
-            <img src="https://res.cloudinary.com/dhuado5jg/image/upload/v1760806709/04be8e33-11ba-45c2-a531-2ceaae9a11cc.png" alt="market page">
-    </div>
-    <hr>
-    <div id="Team">
-        <h2>Team Details</h2>
-        <p>Team Number: <br>25AACR17</p>
-        <p>Senior Mentor: <br>Vaishnavi Addla</p>
-        <p>Junior Mentor: <br>Dheeraj Chandra</p>
-        <p>Team Member 1: <br>Sai Sathwik</p>
-        <p>Team Member 2: <br>Chandu Chethan</p>
-        <p>Team Member 3: <br>Divya</p>
-        <p>Team Member 4: <br>Anvitha</p>
-    </div>
-    <hr>
-    <div id="cont">
-        <h2>Contribution</h2>
-          <strong>This section provides instructions and details on how to submit a contribution via a pull request. It is important to follow these guidelines to make sure your pull request is accepted.</strong> 
-        <br>
-            1. Before choosing to propose changes to this project, it is advisable to go through the readme.md file of the project to get the philosophy and the motive that went behind this project. The pull request should align with the philosophy and the motive of the original poster of this project. <br>
-            2. To add your changes, make sure that the programming language in which you are proposing the changes should be the same as the programming language that has been used in the project. The versions of the programming language and the libraries(if any) used should also match with the original code. <br>
-            3. Write a documentation on the changes that you are proposing. The documentation should include the problems you have noticed in the code(if any), the changes you would like to propose, the reason for these changes, and sample test cases. Remember that the topics in the documentation are strictly not limited to the topics aforementioned, but are just an inclusion. <br>
-            4. Submit a pull request via <a href="https://gist.github.com/mikepea/863f63d6e37281e329f8">Git etiquette</a>
-        <br>
-    </div>
-    <hr>
-    <div id="improve">
-        <h2>Improvements</h2>
-        <ul>
-            <li>Along with Scouts,Players and Agents we can also include pages for clubs like Barcelona to manage their scouts and transfers</li>
-            <li>Also if we include pages for clubs, we can include pages for club health department. For example, if someone gets injured, his club department informs everyone via website</li>
-            <li>You can integrate this with ML-Ops in such a way that you can render the stats of players from the match recordings</li>
-            <li>Along with goals, assists, you can also show other important details like offball movements, if we integrate it with ML-Ops</li>
-            <li>You can also show player behavior using red and yellow backgrounds in market page</li>
-        </ul>
-    </div>
+# CareConnect – Mini Healthcare Support Web App
+
+A beautifully designed, responsive web application built for an NGO healthcare support initiative. This app enables patient registration, volunteer sign-ups, and provides an AI-powered FAQ assistant called **CareBuddy**.
+
+---
+
+## 🌐 Live Demo
+
+**[🔗 Live Hosted Link →](https://your-deployed-url.run.app)**  
+*(Replace with your actual Cloud Run / Vercel / Netlify URL after deployment)*
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Structure | HTML5 (semantic) |
+| Styling | Vanilla CSS (glassmorphism, animations, responsive grid) |
+| Logic | Vanilla JavaScript (ES6+) |
+| Fonts | Google Fonts – Inter, Outfit |
+| Deployment | Google Cloud Run / Nginx (Docker) |
+
+**No frameworks, no dependencies** — pure HTML/CSS/JS for maximum portability and fast load times.
+
+---
+
+## 🤖 AI / Automation Idea — CareBuddy FAQ Chatbot
+
+**CareBuddy** is an embedded conversational AI assistant that answers patient and volunteer queries in real time.
+
+### How It Works
+- A **knowledge base** of 13+ FAQ categories is defined in `app.js`
+- When a user sends a message, the chatbot **keyword-matches** the input against the knowledge base
+- A simulated **typing indicator** and random response delay (700–1500ms) mimic real AI latency
+- **Quick reply chips** guide new users to common questions instantly
+- Falls back gracefully with a contact prompt if no match is found
+
+### NGO Use-Case Value
+In a production deployment, CareBuddy would connect to:
+- **Dialogflow / Rasa** for NLP-powered understanding
+- **Backend API** to check application status, volunteer availability, and real-time FAQs
+- **WhatsApp / SMS integration** via Twilio for patients without smartphones
+
+This dramatically reduces the manual load on NGO support staff for repetitive queries.
+
+---
+
+## 📋 Features
+
+### 🤒 Patient Support Form
+- Full name, age, phone, city, support type selection
+- Description field for personalized case assessment
+- Real-time client-side validation with helpful error messages
+- Consent checkbox + simulated async submission
+
+### 🤝 Volunteer Registration Form
+- Name, qualification, phone, city, email, expertise area
+- Availability selector and motivation textarea
+- Code of conduct consent
+
+### 💬 CareBuddy AI Chatbot
+- Floating chat button with pulse animation
+- Keyword-based intent matching across 13 FAQ categories
+- Typing indicator with animated dots
+- Quick reply chips for common questions
+
+### 📖 FAQ Accordion
+- 6 commonly asked questions with smooth expand/collapse
+- Scroll-triggered entrance animations
+
+### 📬 Contact Form
+- Name, email, and message with simulated send
+
+### 🎨 Design Highlights
+- Dark mode UI with teal/blue gradient accents
+- Animated background blobs in the hero section
+- Glassmorphism cards
+- Fully responsive (mobile, tablet, desktop)
+- Smooth scroll and intersection observer animations
+
+---
+
+## 📁 File Structure
+
+```
+RTRP/
+├── index.html        # Main HTML – all sections
+├── style.css         # Complete design system & styles
+├── app.js            # Form logic, validation, chatbot, animations
+├── hero-image.png    # AI-generated hero illustration
+├── Dockerfile        # Container config for Cloud Run
+└── README.md         # This file
+```
+
+---
+
+## 🚀 Running Locally
+
+Simply open `index.html` in a browser — no build step required.
+
+```bash
+# Option 1: Open directly
+open index.html
+
+# Option 2: Local dev server (Python)
+python3 -m http.server 8080
+# Then visit http://localhost:8080
+```
+
+---
+
+## 🐳 Deploying with Docker / Cloud Run
+
+```bash
+# Build the image
+docker build -t careconnect .
+
+# Run locally
+docker run -p 8080:80 careconnect
+
+# Deploy to Google Cloud Run
+gcloud run deploy careconnect --source . --region europe-west1 --allow-unauthenticated
+```
+
+---
+
+## 🌍 NGO Use-Case
+
+**CareConnect** addresses the healthcare access gap faced by underprivileged communities in India. The platform:
+
+1. **Reduces barrier to entry** – patients register with just a phone number and city
+2. **Scales volunteer management** – centralized registration and matching
+3. **Provides 24/7 initial support** via CareBuddy without requiring staff
+4. **Builds trust** through transparent privacy practices and consent-first design
+5. **Extensible** – can integrate with government hospital APIs, Aarogya Setu, and health record systems
+
+---
+
+## 👥 Target Beneficiaries
+
+- Low-income patients requiring free medical consultations
+- Individuals needing mental health support without stigma
+- Rural communities with limited healthcare infrastructure
+- Medical professionals who wish to volunteer their time
+
+---
+
+*Made with ❤️ for India's healthcare communities.*

@@ -1,9 +1,0 @@
-fastapi>=0.115.0
-uvicorn>=0.30.0
-python-multipart>=0.0.9
-ultralytics>=8.3.0
-norfair>=2.2.0
-opencv-python>=4.10.0
-numpy>=1.26.0
-pyngrok>=7.2.0
-nest-asyncio>=1.6.0
